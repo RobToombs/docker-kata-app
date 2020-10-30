@@ -1,0 +1,32 @@
+
+.vote-button {
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+}
+
+.like {
+    background: url(../img/like.svg)
+}
+
+.like:hover {
+    background: url(../img/like-hover.svg)
+}
+
+.dislike {
+    background: url(../img/dislike.svg)
+}
+
+.dislike:hover {
+    background: url(../img/dislike-hover.svg)
+}
+
+.left {
+    float: left;
+}
+
+.cap-size {
+    object-fit: cover;
+    width: 600px;
+    height: 600px;
+}

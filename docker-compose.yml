@@ -1,0 +1,28 @@
+version: '3'
+services:
+
+  postgres-db:
+    build: ./database
+    container_name: kata-postgres-container
+    ports:
+      - 5432:5432
+
+  backend-app:
+    build: ./backend
+    container_name: kata-backend-container
+    ports:
+      - 8080:8080
+    links:
+      - postgres-db
+
+  frontend-ui:
+    build: ./frontend
+    container_name: kata-frontend-container
+    ports:
+      - 9000:80
+    links:
+      - backend-app
+
+
+volumes:
+  postgres-data:

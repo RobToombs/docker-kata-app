@@ -1,0 +1,33 @@
+
+server:
+  port: 8080
+spring:
+  jpa:
+    hibernate:
+      ddl-auto: create
+    properties:
+      dialect: org.hibernate.dialect.PostgresSQL10Dialect
+    open-in-view: false
+  datasource:
+    url: jdbc:postgresql://${DB_SERVER}/${POSTGRES_DB}
+    username: ${POSTGRES_USER}
+    password: ${POSTGRES_PASSWORD}
+    platform: postgres
+    driver-class-name: org.postgresql.Driver
+    hikari:
+      connection-timeout: 20000
+      maximum-pool-size: 4
+  flyway:
+    url: jdbc:postgresql://${DB_SERVER}/${POSTGRES_DB}
+    schemas: public
+    user: ${POSTGRES_USER}
+    password: ${POSTGRES_PASSWORD}
+
+---
+
+spring:
+  profiles: development
+  datasource:
+    url: jdbc:postgresql://localhost:5432/postgres
+  flyway:
+    url: jdbc:postgresql://localhost:5432/postgres
