@@ -22,7 +22,3 @@ services:
       - 9000:80
     links:
       - backend-app
-
-
-volumes:
-  postgres-data:
