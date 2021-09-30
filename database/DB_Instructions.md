@@ -88,9 +88,10 @@
     
 7. Verify that you can connect to the postgres datasource using `psql`
 
-    `psql -d postgres -U postgres`
+    `docker exec -it postgres-db psql -U postgres`
 
-    Use password: `admin`
+    Use password: `admin` if prompted
+    
     
 8. Exit out of `psql`, stop the container using:
 
