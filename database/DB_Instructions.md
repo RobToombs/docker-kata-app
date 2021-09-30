@@ -88,7 +88,7 @@
     
 7. Verify that you can connect to the postgres datasource using `psql`
 
-    `docker exec -it postgres-db psql -U postgres`
+    `docker exec -it kata-postgres-container psql -U postgres`
 
     Use password: `admin` if prompted
     
