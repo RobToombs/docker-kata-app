@@ -86,7 +86,7 @@
     | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
     | 89084e24598b | postgres-db | "docker-entrypoint.s…" | 9 minutes ago | Up About a minute | 0.0.0.0:5432->5432/tcp | kata-postgres-container |
     
-7. Verify that you can connect to the postgres datasource using `psql`
+7. Verify that you can connect to the postgres datasource
 
     `docker exec -it kata-postgres-container psql -U postgres`
 
