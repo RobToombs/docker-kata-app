@@ -85,7 +85,7 @@ some sort of IDE + terminal (I use IntelliJ and Cygwin)
      calls to our backend application. Our backend application in turn makes successful calls to our container running
      the postgres DB.
      
-     If you use `psql` to log back into the postgres container, you can run `SELECT * FROM dog;` and verify DB content:
+     If you use `docker exec -it kata-postgres-container psql -U postgres` to log back into the postgres container, you can run `SELECT * FROM dog;` and verify DB content:
      
      `postgres=# SELECT * FROM dog;`
      
